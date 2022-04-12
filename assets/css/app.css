@@ -44,12 +44,22 @@ body{
         font-size: 1rem !important;
     }
 }
+@media (max-width: 600px){
+    #quote{
+        font-size: .5rem;
+    }
+
+    .quoteword{
+        font-size: .7rem !important;
+        display: inline-block;
+    }
+}
 
 .navbar-brand{
     margin-right: 2rem;
     color: #1b1b1b !important;
     font-weight: bolder;
-    padding: 0 5rem 0 5rem;
+    padding: .5rem;
 }
 
 .nav-link{
