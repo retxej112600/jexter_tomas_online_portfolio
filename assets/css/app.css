@@ -19,40 +19,9 @@ body{
     background-color: #e0e0e0;
 }
 
-@media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-    }
-}
-
-@media (max-width: 768px){
-    .nav-link{
-        display: flex;
-        justify-content: center;
-    }
-
-    img{
-        height: 10rem !important;
-        width: 10rem !important;
-    }
-
-    #quote{
-        font-size: .8rem;
-    }
-
-    .quoteword{
-        font-size: 1rem !important;
-    }
-}
-@media (max-width: 600px){
-    #quote{
-        font-size: .5rem;
-    }
-
-    .quoteword{
-        font-size: .7rem !important;
-        display: inline-block;
-    }
+.quoteword{
+    font-size: 3rem; 
+    margin-left: .6rem;
 }
 
 .navbar-brand{
@@ -74,7 +43,7 @@ body{
     color: #1b1b1b;
 }
 
-img{
+#profile-image{
     height: 15rem;
     width: 15rem;
     border-radius: 50%;
@@ -98,4 +67,130 @@ img{
 
 #bottom-links{
     background-color: #141414;
+}
+
+meter{
+    height: 2rem !important;
+}
+
+meter::-webkit-meter-optimum-value{
+    background-color: grey;
+}
+
+meter::-webkit-meter-optimum-value:hover{
+    background-color: #b7b7b7;
+}
+
+.project-image{
+    height: 10rem;
+    width: 15rem;
+}
+
+.carousel-inner div img{
+    height: 15rem !important;
+    width: 30rem !important;
+}
+
+.title{
+    cursor: pointer;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem
+}
+
+.form-control-placeholder {
+    position: absolute;
+    top: 0;
+    padding: 7px 0 0 10px;
+    transition: all 200ms;
+    opacity: 0.5;
+    color: black;
+}
+
+.form-control:focus+.form-control-placeholder,
+.form-control:valid+.form-control-placeholder {
+    font-size: 69%;
+    transform: translate3d(0, -100%, 0);
+    opacity: 1;
+    top: 10px
+}
+
+.form-control {
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid #656565;
+    font-size: 16px;
+    color: #656565;
+    background-color: transparent
+}
+
+.form-control:focus {
+    border: 0;
+    color: black;
+    background-color: transparent;
+    border-color: #fff;
+    outline: 0;
+    border-bottom: 2px solid black;
+    box-shadow: 0 0 0 0.2rem transparent
+}
+
+
+/* Medias */
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+/* Medium screens */
+@media (max-width: 768px){
+    .nav-link{
+        display: flex;
+        justify-content: center;
+    }
+
+    img{
+        height: 10rem !important;
+        width: 10rem !important;
+    }
+
+    #quote{
+        font-size: .8rem;
+    }
+
+    .quoteword{
+        font-size: 1rem !important;
+    }
+
+    .project-image{
+        height: 8rem !important;
+        width: 13rem !important;
+    }
+}
+
+/* Small screens */
+@media (max-width: 576px){
+    #quote{
+        font-size: .5rem;
+    }
+    .quoteword{
+        font-size: .7rem !important;
+        display: inline-block;
+    }
+
+    .project-image{
+        height: 1rem !important;
+        width: 1rem !important;
+    }
+}
+
+/* Large screens */
+@media (max-width: 992px){
+    .project-image{
+        height: 10rem !important;
+        width: 15rem !important;
+    }
 }
