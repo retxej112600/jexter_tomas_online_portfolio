@@ -27,21 +27,21 @@ $(document).ready(function () {
         var email = $('#inputEmail').val();
         var message = $('#inputMessage').val();
         if (email == "" || message == "") {
-            alert("All fields must not empty!!")
+            alert("All fields should not be empty!!")
         }else{
             Email.send({
                 Host : "smtp.gmail.com",
-                Username : "tomasjexter@gmail.com",
-                Password : "vwus amqb abva rleq",
+                Username : "retxej112600@gmail.com",
+                Password : "ijtg qrtk azjp gpmd",
                 To : 'jextertomas@gmail.com',
                 From : email,
                 Subject : email,
                 Body : message
             }).then(
-                alert("Email has been sent...")
+                alert("Sending email is under maintenance...")
             );
-            $('#inputEmail').val("")
-            $('#inputMessage').val("")
+            $('#inputEmail').val("");
+            $('#inputMessage').val("");
         }
     });
 });
