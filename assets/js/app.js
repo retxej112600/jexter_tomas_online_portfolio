@@ -10,10 +10,10 @@ $(document).ready(function () {
         })
         $(this).addClass('active');
         var target = this.hash,
-        menu = target;
+            menu = target;
         $target = $(target);
         $('html').animate({
-            scrollTop: $target.offset().top-70
+            scrollTop: $target.offset().top - 70
         }, 0);
         $(document).on("scroll", onScroll);
     });
@@ -22,31 +22,9 @@ $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip()
     });
 
-    $('#emailSubmit').on('submit',function(e){
-        e.preventDefault();
-        var email = $('#inputEmail').val();
-        var message = $('#inputMessage').val();
-        if (email == "" || message == "") {
-            alert("All fields should not be empty!!")
-        }else{
-            Email.send({
-                Host : "smtp.gmail.com",
-                Username : "retxej112600@gmail.com",
-                Password : "ijtg qrtk azjp gpmd",
-                To : 'jextertomas@gmail.com',
-                From : email,
-                Subject : email,
-                Body : message
-            }).then(
-                alert("Sending email is under maintenance...")
-            );
-            $('#inputEmail').val("");
-            $('#inputMessage').val("");
-        }
-    });
 });
 
-function onScroll(event){
+function onScroll(event) {
     var scrollPos = $(document).scrollTop() + 80;
     $('.nav-link').each(function () {
         var currLink = $(this);
@@ -55,8 +33,10 @@ function onScroll(event){
             $('.nav-link').removeClass("active");
             currLink.addClass("active");
         }
-        else{
+        else {
             currLink.removeClass("active");
         }
     });
 }
+
+
