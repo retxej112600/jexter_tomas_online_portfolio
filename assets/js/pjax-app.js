@@ -26,6 +26,14 @@ $(document).ready(() => {
         }
     });
 
+    function CAPS(str) {
+        let words = str.split(' ');
+        for (let i = 0; i < words.length; i++) {
+            words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+        }
+        return words.join(' ');
+    }
+
     let clientBound, newElement;
     var pjax = new Pjax({
         elements: ".nav-link",
@@ -67,6 +75,7 @@ $(document).ready(() => {
             $('#age').html(Math.floor((new Date() - new Date("2000-11-26")) / (365 * 24 * 60 * 60 * 1000)))
         }
         NProgress.done()
+        document.title = 'My Online Portfolio - '+CAPS(newElement.id) 
         newElement.style.marginTop = '0px'
     })
 })
